@@ -12,6 +12,7 @@
 tmp/cache
 tmp/sessions
 tmp/uploads
+tmp
 logs
 
 /vendor

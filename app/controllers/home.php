@@ -4,9 +4,8 @@ namespace controllers;
 
 class Home extends _Base {
 	
-    function index($f3)
-    {
-    	echo \helpers\html::instance()->btn('hi');
-        echo 'Hello World';
-    }
+	function index($f3)
+	{
+		$this->render('home', 'home');
+	}
 }
