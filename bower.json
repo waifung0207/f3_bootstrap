@@ -1,0 +1,15 @@
+{
+  "name": "f3_bootstrap",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Chan <waifung0207@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
