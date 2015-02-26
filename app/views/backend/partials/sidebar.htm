@@ -24,6 +24,27 @@
 		<ul class="sidebar-menu">
 		
 			<li class="header">MAIN NAVIGATION</li>
+			<repeat group="{{ @menu }}" value="{{ @parent }}">
+				<check if="{{ empty(@parent.children) }}">
+					<true>
+						<li><a href="{{ @parent.url }}"><i class="{{ @parent.icon }}"></i> {{ @parent.name }}</a></li>
+					</true>
+					<false>
+						<li class="treeview">
+							<a href="#">
+								<i class="{{ @parent.icon }}"></i> {{ @parent.name }} <i class="fa fa-angle-left pull-right"></i>
+							</a>
+							<ul class="treeview-menu">
+								<repeat group="{{ @parent.children }}" value="{{ @child }}">
+									<li><a href="{{ @child.url }}"><i class="fa fa-circle-o"></i> {{ @child.name }}</a></li>
+								</repeat>
+							</ul>
+						</li>
+					</false>
+				</check>
+			</repeat>
+
+			{*
 			<li><a href=""><i class="fa fa-home"></i> Home</a></li>
 			<li class="treeview">
 				<a href="#">
@@ -35,6 +56,7 @@
 				</ul>
 			</li>
 			<li><a href="logout"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+			*}
 
 			<li class="header">USEFUL LINKS</li>
 			<li><a href="{{ @BASE }}"><i class="fa fa-circle-o text-info"></i> Frontend Site</a></li>
