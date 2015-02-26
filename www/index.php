@@ -11,4 +11,10 @@ $f3->config('app/routes.ini');
 // enable multi-lingual site
 //$f3->set('ml',Multilang::instance());
 
+// custom error page
+$f3->set('ONERROR', function($f3) {
+	// TODO: decide whether the error page comes from frontend or backend
+	echo \Template::instance()->render('error.htm');
+});
+
 $f3->run();
