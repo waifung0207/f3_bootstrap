@@ -9,7 +9,17 @@ abstract class _Base extends \controllers\_Base {
 
 	public function beforeRoute() {
 		$this->f3->set('site', 'frontend');
+		$this->setupMenu();
+	}
 
+	public function afterRoute() {
+		$this->renderTemplate();
+	}
+
+	/**
+	 * Top menu
+	 */
+	private function setupMenu() {
 		$this->f3->set('menu', array(
 			array(
 				'name'		=> 'Home',
@@ -38,9 +48,5 @@ abstract class _Base extends \controllers\_Base {
 				'url'		=> 'about',
 			),
 		));
-	}
-
-	public function afterRoute() {
-		$this->renderTemplate();
 	}
 }

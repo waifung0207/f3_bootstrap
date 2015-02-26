@@ -9,7 +9,17 @@ abstract class _Base extends \controllers\_Base {
 
 	public function beforeRoute() {
 		$this->f3->set('site', 'backend');
+		$this->setupMenu();
+	}
 
+	public function afterRoute() {
+		$this->renderTemplate();
+	}
+
+	/**
+	 * Sidebar menu
+	 */
+	private function setupMenu() {		
 		$this->f3->set('menu', array(
 			array(
 				'name'		=> 'Home',
@@ -41,9 +51,5 @@ abstract class _Base extends \controllers\_Base {
 				'icon'		=> 'fa fa-sign-out',
 			),
 		));
-	}
-
-	public function afterRoute() {
-		$this->renderTemplate();
 	}
 }
