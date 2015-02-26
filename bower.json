@@ -13,6 +13,9 @@
     "tests"
   ],
   "dependencies": {
-    "adminlte": "~2.0.2"
+    "jquery-legacy": "jquery#1.11.2",
+    "jquery-migrate": "1.2.*",
+    "adminlte": "~2.0.2",
+    "bootstrap": "~3.3.2"
   }
 }
