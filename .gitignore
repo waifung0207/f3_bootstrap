@@ -9,11 +9,6 @@
 *.tmp
 *.bak
 *.old
-tmp/cache
-tmp/sessions
-tmp/uploads
-tmp
-logs
 
 /vendor
 /node_modules
