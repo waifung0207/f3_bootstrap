@@ -1,0 +1,23 @@
+{
+  "name": "f3_bootstrap",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://waifung@bitbucket.org/waifung/f3_bootstrap.git"
+  },
+  "author": "Michael Chan <waifung.hk>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-changed": "latest",
+    "del": "latest"
+  }
+}

@@ -1,14 +1,32 @@
-<div class="container">
+
+<!-- Site wrapper -->
+<div class="wrapper">
+	
 	<include href="backend/partials/header.htm" />
-	<div style='height:80px'></div>
 
-	<div class="content-header">
-		<h1>{{ @title }}</h1>
-	</div>
+	<!-- =============================================== -->
 
-	<section class="content">
-		<include href="{{ @content }}" />
-	</section>
+	<!-- Left side column. contains the sidebar -->
+	<include href="backend/partials/sidebar.htm" />
+
+	<!-- Right side column. Contains the navbar and content of the page -->
+	<div class="content-wrapper">
+
+		<!-- Content Header (Page header) -->
+		<section class="content-header">
+			<h1>
+				{{ @title }}
+				<!--<small>it all starts here</small>-->
+			</h1>
+			<include href="backend/partials/breadcrumb.htm" />
+		</section>
+
+		<section class="content">
+			<include href="{{ @content }}" />
+		</include>
+
+	</div><!-- /.content-wrapper -->
+
+	<include href="backend/partials/footer.htm" />
+
 </div>
-
-<include href="backend/partials/footer.htm" />
