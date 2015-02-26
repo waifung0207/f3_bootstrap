@@ -11,5 +11,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "adminlte": "~2.0.2"
+  }
 }
