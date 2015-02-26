@@ -18,7 +18,7 @@
 		<![endif]-->
 	</head>
 	
-	<body class="{{ @skin }}">
+	<body class="{{ empty(@skin) ? @backend.skin : @skin }}">
 		<include href="{{ @layout }}" />
 		<script src="{{ @BASE }}/dist/backend.min.js"></script>
 	</body>
