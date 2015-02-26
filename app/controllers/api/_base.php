@@ -8,7 +8,7 @@ namespace controllers\api;
 abstract class _Base extends \controllers\_Base {
 
 	/**
-	 * Methods to be overrided y child controllers
+	 * Methods to be overrided by child controllers
 	 */
 	public function get($f3, $params) {
 		$this->f3->set('response', $params);
