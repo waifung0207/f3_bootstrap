@@ -12,7 +12,7 @@ Please note this project will change from time to time, so breaking changes are 
 ### Features
 
 * Multiple sites in single web applications for enhanced code reusability
-* Well-structured folders for classes and templates with clear namespaces
+* Well-structured folders for templates and classes (e.g. controllers, models) with clear namespaces
 * Frontend System with Bootstrap v3 theme
 * Backend System with AdminLTE v2 theme
 * API for RESTful endpoints
