@@ -8,7 +8,15 @@ namespace controllers\backend;
 abstract class _Base extends \controllers\_Base {
 
 	public function beforeRoute() {
-		$this->f3->set('site', 'backend');
+		$f3 = $this->f3;
+
+		$f3->set('site', 'backend');
+		
+		// config language
+		$lang = $f3->exists('SESSION.backend_language') ? $f3->get('SESSION.backend_language') : $f3->get('backend.default_lang');
+		$f3->set('LANGUAGE', $lang);
+		
+		// config menu
 		$this->setupMenu();
 	}
 
@@ -19,34 +27,34 @@ abstract class _Base extends \controllers\_Base {
 	/**
 	 * Sidebar menu
 	 */
-	private function setupMenu() {		
+	private function setupMenu() {
 		$this->f3->set('menu', array(
 			array(
-				'name'		=> 'Home',
+				'name'		=> $this->f3->get('lang.home'),
 				'url'		=> '',
 				'icon'		=> 'fa fa-home',
 			),
 			array(
-				'name'		=> 'Example',
+				'name'		=> $this->f3->get('lang.example'),
 				'url'		=> 'example',
 				'icon'		=> 'fa fa-cogs',
 				'children'	=> array(
 					array(
-						'name'	=> 'Example 1',
+						'name'	=> $this->f3->get('lang.example').' 1',
 						'url'	=> 'example/1',
 					),
 					array(
-						'name'	=> 'Example 2',
+						'name'	=> $this->f3->get('lang.example').' 2',
 						'url'	=> 'example/2',
 					),
 					array(
-						'name'	=> 'Example 3',
+						'name'	=> $this->f3->get('lang.example').' 3',
 						'url'	=> 'example/3',
 					),
 				),
 			),
 			array(
-				'name'		=> 'Logout',
+				'name'		=> $this->f3->get('lang.logout'),
 				'url'		=> 'logout',
 				'icon'		=> 'fa fa-sign-out',
 			),

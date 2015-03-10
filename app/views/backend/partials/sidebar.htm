@@ -4,8 +4,8 @@
 		{* Sidebar user panel *}
 		<div class="user-panel">
 			<div class="pull-left info">
-				<p>Administrator</p>
-				<a href="account"><i class="fa fa-circle text-success"></i> Online</a>
+				<p>{{ @lang.backend.admin }}</p>
+				<a href="account"><i class="fa fa-circle text-success"></i> {{ @lang.backend.online }}</a>
 			</div>
 		</div>
 
@@ -23,7 +23,7 @@
 
 		<ul class="sidebar-menu">
 		
-			<li class="header">MAIN NAVIGATION</li>
+			<li class="header">{{ @lang.backend.menu_main }}</li>
 			<repeat group="{{ @menu }}" value="{{ @parent }}">
 				<check if="{{ empty(@parent.children) }}">
 					<true>
@@ -45,21 +45,21 @@
 			</repeat>
 
 			{*
-			<li><a href=""><i class="fa fa-home"></i> Home</a></li>
+			<li><a href=""><i class="fa fa-home"></i> {{ @lang.home }}</a></li>
 			<li class="treeview">
 				<a href="#">
-					<i class="fa fa-cogs"></i> <span>Example</span> <i class="fa fa-angle-left pull-right"></i>
+					<i class="fa fa-cogs"></i> <span>{{ @lang.example }}</span> <i class="fa fa-angle-left pull-right"></i>
 				</a>
 				<ul class="treeview-menu">
-					<li><a href="#"><i class="fa fa-circle-o"></i> Example 1</a></li>
-					<li><a href="#"><i class="fa fa-circle-o"></i> Example 2</a></li>
+					<li><a href="#"><i class="fa fa-circle-o"></i> {{ @lang.example }} 1</a></li>
+					<li><a href="#"><i class="fa fa-circle-o"></i> {{ @lang.example }} 2</a></li>
 				</ul>
 			</li>
-			<li><a href="logout"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+			<li><a href="logout"><i class="fa fa-sign-out"></i> {{ @lang.sign_out }}</a></li>
 			*}
 
-			<li class="header">USEFUL LINKS</li>
-			<li><a href="{{ @BASE }}"><i class="fa fa-circle-o text-info"></i> Frontend Site</a></li>
+			<li class="header">{{ @lang.backend.menu_links }}</li>
+			<li><a href="{{ @BASE }}"><i class="fa fa-circle-o text-info"></i> {{ @lang.frontend_site }}</a></li>
 
 		</ul>
 

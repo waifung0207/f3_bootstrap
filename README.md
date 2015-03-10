@@ -5,14 +5,23 @@ A starter template that supports multi-tenant (frontend / backend / api) website
 This repository is developed upon the following tools: 
 * [Fat-Free Framework](http://fatfreeframework.com/) (v3.4.0) - PHP framework
 * [Bootstrap](http://getbootstrap.com/) (v3.3.2) - Popular frontend framework
-* [AdminLTE](https://github.com/almasaeed2010/AdminLTE) (v2.0.2) - Theme for backend system
+* [AdminLTE](https://github.com/almasaeed2010/AdminLTE) (v2.0.4) - Theme for backend system
 
 Please note this project will change from time to time, so breaking changes are unavoidable in future versions.
 
+### Features
+
+* Multiple sites in single web applications for enhanced code reusability
+* Well-structured folders for classes and templates with clear namespaces
+* Frontend System with Bootstrap v3 theme
+* Backend System with AdminLTE v2 theme
+* API for RESTful endpoints
+* INI config files to organize routes, global values and localization
+* Multilingual support
+* Gulp setup for minifying assets
 
 ### TODO
 
-* [General] Multilingual support
 * [General] More helpers to enhance code reusability (e.g. to build forms and HTML elements)
 * [General] 404 error pages
 * [General] Email feature and templates

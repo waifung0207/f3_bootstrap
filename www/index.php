@@ -8,9 +8,6 @@ $f3=require('lib/base.php');
 $f3->config('app/config.ini');
 $f3->config('app/routes.ini');
 
-// enable multi-lingual site
-//$f3->set('ml',Multilang::instance());
-
 /*
 // custom error page
 $f3->set('ONERROR', function($f3) {

@@ -8,7 +8,15 @@ namespace controllers\frontend;
 abstract class _Base extends \controllers\_Base {
 
 	public function beforeRoute() {
-		$this->f3->set('site', 'frontend');
+		$f3 = $this->f3;
+		
+		$f3->set('site', 'frontend');
+
+		// config language
+		$lang = $f3->exists('SESSION.frontend_language') ? $f3->get('SESSION.frontend_language') : $f3->get('frontend.default_lang');
+		$f3->set('LANGUAGE', $lang);
+
+		// config menu
 		$this->setupMenu();
 	}
 
@@ -22,29 +30,29 @@ abstract class _Base extends \controllers\_Base {
 	private function setupMenu() {
 		$this->f3->set('menu', array(
 			array(
-				'name'		=> 'Home',
+				'name'		=> $this->f3->get('lang.home'),
 				'url'		=> '',
 			),
 			array(
-				'name'		=> 'Example',
+				'name'		=> $this->f3->get('lang.example'),
 				'url'		=> 'example',
 				'children'	=> array(
 					array(
-						'name'	=> 'Example 1',
+						'name'	=> $this->f3->get('lang.example').' 1',
 						'url'	=> 'example/1',
 					),
 					array(
-						'name'	=> 'Example 2',
+						'name'	=> $this->f3->get('lang.example').' 2',
 						'url'	=> 'example/2',
 					),
 					array(
-						'name'	=> 'Example 3',
+						'name'	=> $this->f3->get('lang.example').' 3',
 						'url'	=> 'example/3',
 					),
 				),
 			),
 			array(
-				'name'		=> 'About',
+				'name'		=> $this->f3->get('lang.about'),
 				'url'		=> 'about',
 			),
 		));
